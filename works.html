@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>つくったもの - ろろろのホームページ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+  <style>
+    details {
+      margin: 20px auto;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::before {
+      content: "▶ ";
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    details[open] summary::before {
+      content: "▼ ";
+    }
+
+    .dark-mode details {
+      background: #222;
+      color: #eee;
+      border-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>menu</h1>
+    <a href="index.html">おうち</a>
+    <a href="about.html">ろろろについて</a>
+    <a href="diary.html">にっき - 多分毎日更新</a>
+    <a href="works.html">つくったもの</a>
+  </nav>
+
+  <main>
+    <h1>つくったもの</h1>
+    <p>月ごとに何か作ったらここにまとめてく予定。</p>
+
+    <details>
+      <summary>2025年8月</summary>
+      <ul>
+        <li>まだ作ってないかも</li>
+      </ul>
+    </details>
+
+    <!-- コピーして増やせる -->
+  </main>
+
+</body>
+</html>

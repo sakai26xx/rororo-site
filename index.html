@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>ろろろのホームページ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <h1>menu</h1>
+    <a href="index.html">おうち</a>
+    <a href="about.html">ろろろについて</a>
+    <a href="diary.html">にっき - 多分毎日更新</a>
+    <a href="works.html">つくったもの</a>
+  </nav>
+
+ <main>
+    <h1>Hello,world!</h1>
+    <p>ろろろのホームページだよ</p>
+
+<div class="intro-box">
+    <h2>自己紹介</h2>
+    <p><strong>名前：</strong>ろろろ</p>
+    <p><strong>趣味：</strong>創作、作業、プログラミング</p>
+    <p><strong>好きな漫画：</strong>タコピーの原罪</p>
+    <p><strong>将来の夢：</strong>マルチクリエイター</p>
+
+</div>
+
+<br>
+
+    <p style="font-size: 19px;">どうもこんにちは。ろろろです。</p>
+    <p style="font-size: 19px;">ここでは日記とか書こうかなって思ってます。</p>
+    <p style="font-size: 19px;">これからよろしくお願いします。</p>
+
+<br>
+
+<div class="intro-box">
+    <h3>ろろろのランダムひとこと</h3>
+<p id="random-message"></p>
+</div>
+
+ </main>
+
+  <script>
+    function toggleDarkmode(){
+        document.body.classList.toggle('dark-mode')
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'd' || event.key === 'D') {
+            toggleDarkmode();
+        }
+
+    });
+
+    // ランダムひとこと
+    const messages = [
+        "甘いものが食べたいな",
+        "グミ食べたい",
+        "月に行きたい",
+        "お金ちょうだい",
+        "おにぎり",
+        "パリッ！ジュワッ",
+        "Hello",
+        "Hey,Bro!",
+        "お前も一緒にゲームを作らないか？",
+        "ホームページ作るの辛い！",
+        "一生家でゲームと作業してたい",
+        "Oh"
+    ];
+
+    const messageBox = document.getElementById("random-message");
+    const randomIndex = Math.floor(Math.random() *messages.length);
+    messageBox.textContent = "「" + messages[randomIndex] + "」";
+
+</script>
+</body>
+</html>
